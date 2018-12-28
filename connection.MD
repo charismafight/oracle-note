@@ -36,3 +36,9 @@ ORA-12560: TNS:protocol adapter error
 在尝试用sqlplus登录远端oracle服务器时抛出异常，但用服务器端同样命令访问正常
 
 ORACLE_SID、TNS_ADMIN设置之后sqlplus username/pwd@orcl 可以正常连接，但程序问题依旧
+
+sqlplus成功之后，检查程序中的引用，有两类oracle组件，从nuget卸载一个旧的，保留官网的Oracle.ManagedDataAccess.Client后出现新的异常
+```
+ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
+```
+至此已经有更加明确的异常提示了，多半与配置相关
