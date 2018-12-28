@@ -21,3 +21,18 @@ oraociei.dll
 
 ### oracle连接字符串中的实例
 oracle在安装时默认实例不为空（与sqlserver不同），安装windows客户端时默认的实例名是orcl，所以连接字符串要求ip/orcl来指定实例才可正常访问
+
+
+
+### OCIEnvCreate 失败，返回代码为 -1，但错误消息文本不可用。
+
+
+```
+Enter user-name: system
+Enter password:
+ERROR:
+ORA-12560: TNS:protocol adapter error
+```
+在尝试用sqlplus登录远端oracle服务器时抛出异常，但用服务器端同样命令访问正常
+
+ORACLE_SID、TNS_ADMIN设置之后sqlplus username/pwd@orcl 可以正常连接，但程序问题依旧
