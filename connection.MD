@@ -1,7 +1,7 @@
 ### 程序无法连接oracle，提示版本8.xx以上
 实际上连接的oracle服务器是12版的，之所以提示该错误是由于连接oracle数据库要求客户端本地也有对应的dll（或安装oracle客户端）。
 
-在(官网)[https://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html]下载，复制其中的关键dll：
+在[官网](https://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html)下载，复制其中的关键dll：
 ```
 oci.dll
 
