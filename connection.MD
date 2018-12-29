@@ -42,3 +42,15 @@ sqlplus成功之后，检查程序中的引用，有两类oracle组件，从nuge
 ORA-12514: TNS: 监听程序当前无法识别连接描述符中请求的服务
 ```
 至此已经有更加明确的异常提示了，多半与配置相关
+
+oracle的连接字符串需要使用tnsnames.ora中对应节来定义DataSource字段：
+如
+```
+ORCL =
+  (DESCRIPTION =(ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.1.65)(PORT = 1521))
+    (CONNECT_DATA =
+      (SERVICE_NAME =orcl)
+    )
+  )
+```
+
